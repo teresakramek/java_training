@@ -9,8 +9,10 @@ import javax.swing.JButton;
 import javax.swing.JTextArea;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import madlib.gui.factory.jframe.JLabelSimpleFactory;
 
 public class MadLibGUI extends JFrame {
+	
 	private JTextField txtAdjective;
 	private JTextField txtColor;
 	private JTextField txtPastTenseVerb;
@@ -18,16 +20,19 @@ public class MadLibGUI extends JFrame {
 	private JTextArea txtOutput;
 	
 	public MadLibGUI() {
+		
+			
+		
 		getContentPane().setBackground(Color.LIGHT_GRAY);
 		getContentPane().setLayout(null);
 		
+	
 		JLabel lblDrPaynesWacky = new JLabel("DR. PAYNE'S WACKY MADLIBS APP");
 		lblDrPaynesWacky.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDrPaynesWacky.setBounds(12, 12, 567, 15);
 		getContentPane().add(lblDrPaynesWacky);
 		
-		JLabel lblEnterAnAdjective = new JLabel("Enter an Adjective: ");
-		lblEnterAnAdjective.setFont(new Font("Dialog", Font.BOLD, 10));
+		JLabel lblEnterAnAdjective = JLabelSimpleFactory.create("Enter an Adjective: ");
 		lblEnterAnAdjective.setBounds(12, 39, 138, 15);
 		getContentPane().add(lblEnterAnAdjective);
 		
@@ -36,8 +41,7 @@ public class MadLibGUI extends JFrame {
 		getContentPane().add(txtAdjective);
 		txtAdjective.setColumns(10);
 		
-		JLabel lblEnterAColor = new JLabel("Enter a Color:");
-		lblEnterAColor.setFont(new Font("Dialog", Font.BOLD, 10));
+		JLabel lblEnterAColor = JLabelSimpleFactory.create("Enter a Color:");
 		lblEnterAColor.setBounds(331, 39, 82, 15);
 		getContentPane().add(lblEnterAColor);
 		
@@ -45,9 +49,8 @@ public class MadLibGUI extends JFrame {
 		txtColor.setBounds(431, 36, 124, 19);
 		getContentPane().add(txtColor);
 		txtColor.setColumns(10);
-		
-		JLabel lblEnterAVerb = new JLabel("Enter a Verb Eading in -ed:");
-		lblEnterAVerb.setFont(new Font("Dialog", Font.BOLD, 10));
+				
+		JLabel lblEnterAVerb = JLabelSimpleFactory.create("Enter a Verb Eading in -ed:");
 		lblEnterAVerb.setBounds(12, 94, 156, 15);
 		getContentPane().add(lblEnterAVerb);
 		
@@ -56,8 +59,7 @@ public class MadLibGUI extends JFrame {
 		getContentPane().add(txtPastTenseVerb);
 		txtPastTenseVerb.setColumns(10);
 		
-		JLabel lblEnterANoun = new JLabel("Enter a Noun:");
-		lblEnterANoun.setFont(new Font("Dialog", Font.BOLD, 10));
+		JLabel lblEnterANoun = JLabelSimpleFactory.create("Enter a Noun:");
 		lblEnterANoun.setBounds(331, 93, 93, 15);
 		getContentPane().add(lblEnterANoun);
 		
@@ -72,6 +74,7 @@ public class MadLibGUI extends JFrame {
 				savedData();
 			}
 		});
+		
 		btnPressHereTo.setFont(new Font("Dialog", Font.BOLD, 11));
 		btnPressHereTo.setBounds(147, 140, 318, 25);
 		getContentPane().add(btnPressHereTo);

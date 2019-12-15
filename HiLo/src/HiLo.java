@@ -15,7 +15,6 @@ public class HiLo {
 			System.out.println("Give me a number:");
 			
 			int theNumber = (int)(Math.random()*10+1);
-			// System.out.println(theNumber);
 			int guess = 0;
 			int numberOfAttempts = 4;
 			int attempt = 1;
